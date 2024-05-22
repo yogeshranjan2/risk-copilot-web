@@ -28,6 +28,7 @@ const RCSAGaps = () => {
 
   const handleSelectedPolicy = (policy: string) => {
     setSelectedPolicy(policy);
+    setLoading(true);
     const { request } = riskService.generateMissingRisks(policy);
     request
       .then((res) => {
@@ -53,6 +54,7 @@ const RCSAGaps = () => {
           onSelectPolicy={(policy: string) => handleSelectedPolicy(policy)}
           displayText="Select Policy to identify missing Risks and Controls"
         />
+        {isLoading && <div className="spinner-border" role="status"></div>}
       </div>
 
       <div className="mb-3">
