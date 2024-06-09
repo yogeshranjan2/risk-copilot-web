@@ -1,11 +1,10 @@
 import apiClient from "./api-client";
-import axios from "axios";
 
 export interface RiskData {
-    RiskTitle: string;
-    RiskDescription: string;
-    RiskControls: string [];
-    RiskCategory: string;
+    riskTitle: string;
+    riskDescription: string;
+    riskControls: string [];
+    riskCategory: string;
 }
 
 export interface RiskGap {
