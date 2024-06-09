@@ -20,13 +20,13 @@ const RiskList = ({ riskItems }: Props) => {
           </thead>
           <tbody>
             {riskItems.map((item) => (
-              <tr key={item.RiskTitle}>
-                <th scope="row">{item.RiskTitle}</th>
-                <td>{item.RiskDescription}</td>
-                <td>{item.RiskCategory}</td>
+              <tr key={item.riskTitle}>
+                <th scope="row">{item.riskTitle}</th>
+                <td>{item.riskDescription}</td>
+                <td>{item.riskCategory}</td>
                 <td>
                   <ul>
-                    {item.RiskControls.map((control) => (
+                    {item.riskControls.map((control) => (
                       <li key={control}>{control}</li>
                     ))}
                   </ul>
